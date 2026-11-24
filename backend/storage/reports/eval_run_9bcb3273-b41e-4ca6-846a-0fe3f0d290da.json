@@ -1,0 +1,99 @@
+{
+  "run_id": "9bcb3273-b41e-4ca6-846a-0fe3f0d290da",
+  "name": "Controlled Fast Benchmark",
+  "dataset_name": "GenStudio-Bench-v1",
+  "created_at": "2026-11-24T07:36:26.642848",
+  "completed_at": "2026-11-24T07:36:26.660605",
+  "target_models": [
+    "black-forest-labs/FLUX.1-schnell",
+    "stabilityai/stable-diffusion-xl-base-1.0"
+  ],
+  "summary_metrics": {
+    "black-forest-labs/FLUX.1-schnell": {
+      "model_id": "black-forest-labs/FLUX.1-schnell",
+      "total_samples": 2,
+      "successful_samples": 2,
+      "failed_samples": 0,
+      "success_rate": 1.0,
+      "median_latency_ms": 86.56,
+      "p90_latency_ms": 86.58,
+      "p95_latency_ms": 86.58,
+      "total_cost_usd": 0.006,
+      "cost_per_success_usd": 0.003,
+      "avg_sim_score": 0.824,
+      "avg_human_quality": null,
+      "avg_human_alignment": null,
+      "metric_version": "GenStudio-Eval-v1.0",
+      "notes": "Metric calculations distinguish latency from network roundtrip; CLIP proxy scores are not an absolute measure of aesthetic quality."
+    },
+    "stabilityai/stable-diffusion-xl-base-1.0": {
+      "model_id": "stabilityai/stable-diffusion-xl-base-1.0",
+      "total_samples": 2,
+      "successful_samples": 2,
+      "failed_samples": 0,
+      "success_rate": 1.0,
+      "median_latency_ms": 86.5,
+      "p90_latency_ms": 86.5,
+      "p95_latency_ms": 86.5,
+      "total_cost_usd": 0.006,
+      "cost_per_success_usd": 0.003,
+      "avg_sim_score": 0.774,
+      "avg_human_quality": null,
+      "avg_human_alignment": null,
+      "metric_version": "GenStudio-Eval-v1.0",
+      "notes": "Metric calculations distinguish latency from network roundtrip; CLIP proxy scores are not an absolute measure of aesthetic quality."
+    },
+    "_execution_metadata": {
+      "mode": "offline-preview",
+      "is_live_inference": false,
+      "is_simulated": true,
+      "label": "Offline Preview (Synthetic Test Fixtures)"
+    }
+  },
+  "observations": [
+    {
+      "prompt_id": "PHOTO-001",
+      "category": "photorealism",
+      "model_id": "black-forest-labs/FLUX.1-schnell",
+      "latency_ms": 86.54,
+      "cost_usd": 0.003,
+      "success": true,
+      "sim_score": 0.803,
+      "temporal_score": null,
+      "prompt_text": "Macro close-up portrait of an elderly watchmaker with deep laugh lines, wearing round brass spectacles, examining intricate vintage watch gears under warm desk lamp illumination, 85mm lens, shallow depth of field."
+    },
+    {
+      "prompt_id": "PHOTO-001",
+      "category": "photorealism",
+      "model_id": "stabilityai/stable-diffusion-xl-base-1.0",
+      "latency_ms": 86.49,
+      "cost_usd": 0.003,
+      "success": true,
+      "sim_score": 0.753,
+      "temporal_score": null,
+      "prompt_text": "Macro close-up portrait of an elderly watchmaker with deep laugh lines, wearing round brass spectacles, examining intricate vintage watch gears under warm desk lamp illumination, 85mm lens, shallow depth of field."
+    },
+    {
+      "prompt_id": "PHOTO-002",
+      "category": "photorealism",
+      "model_id": "black-forest-labs/FLUX.1-schnell",
+      "latency_ms": 86.58,
+      "cost_usd": 0.003,
+      "success": true,
+      "sim_score": 0.845,
+      "temporal_score": null,
+      "prompt_text": "Morning dew drops resting on a vibrant emerald monstera leaf in a sunlit botanical glasshouse, crisp reflections, soft bokeh background, natural morning sunlight."
+    },
+    {
+      "prompt_id": "PHOTO-002",
+      "category": "photorealism",
+      "model_id": "stabilityai/stable-diffusion-xl-base-1.0",
+      "latency_ms": 86.5,
+      "cost_usd": 0.003,
+      "success": true,
+      "sim_score": 0.795,
+      "temporal_score": null,
+      "prompt_text": "Morning dew drops resting on a vibrant emerald monstera leaf in a sunlit botanical glasshouse, crisp reflections, soft bokeh background, natural morning sunlight."
+    }
+  ]
+}

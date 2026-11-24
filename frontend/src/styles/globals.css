@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0A0C10;
+  --bg-secondary: #0E121B;
+  --bg-card: #121622;
+  --bg-card-hover: #161C2C;
+  --border-subtle: #1B2132;
+  --border-default: #232B40;
+  --border-hover: #313C58;
+  --accent-emerald: #10B981;
+  --accent-teal: #14B8A6;
+  --accent-cyan: #06B6D4;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accessible focus visible rings */
+:focus-visible {
+  outline: 2px solid #10B981;
+  outline-offset: 2px;
+}
+
+/* Custom fine studio scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0C10;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2538;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2D3752;
+}
+
+/* Subtle elevation and accents */
+.glow-emerald {
+  box-shadow: 0 0 24px -6px rgba(16, 185, 129, 0.2);
+}
+
+.glow-teal {
+  box-shadow: 0 0 24px -6px rgba(20, 184, 166, 0.2);
+}
+
+.studio-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(35, 43, 64, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(35, 43, 64, 0.25) 1px, transparent 1px);
+}
+
+/* Responsive Table Wrapper */
+.responsive-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Touch friendly minimum sizing */
+@media (max-width: 640px) {
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
